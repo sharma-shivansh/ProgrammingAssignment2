@@ -1,7 +1,7 @@
 ## Below functions calculates the inverse of a matrix 
 ## and caches the matrix for subsequent function calls
 
-## Creating caching matrix
+## Creating caching matrix - function returns a list with 4 internal functions
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
@@ -18,7 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Inverting the matrix if inverted matrix isn't available in cache
+## Inverting the matrix if inverted matrix isn't available in cache 
+## & returning the inverted one back to calling environment
 
 cacheSolve <- function(x) {
     inv <- x$getinverted()
